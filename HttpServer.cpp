@@ -62,6 +62,7 @@ static void SolveHeaderTestFunction(const curl_slist * header )
     }
 }
 
+/// Mutex for curl
 std::mutex HttpConnection::g_send_mutex ;
 
 std::string HttpConnection::SendSyncHttpRequest(const HttpRequest &httpRequest, HttpResponse &httpResponse, std::string &error , bool verbose) throw(HttpConnectionException)
